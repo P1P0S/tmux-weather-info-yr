@@ -11,14 +11,14 @@ Dependencies:
 Edit your `.tmux.conf` and append the plugin to your TPM list.
 
 ```tmux
-set -g @plugin 'feqzz/tmux-weather-info-yr'
+set -g @plugin 'P1P0S/tmux-weather-info-yr'
 ```
 Remember to hit `<prefix> + I` to install the plugin.
 
 ### Manual
 Clone the repo:
 ``` bash
-git clone https://github.com/feqzz/tmux-weather-info-yr ~/.tmux/
+git clone https://github.com/P1P0S/tmux-weather-info-yr ~/.tmux/
 ```
 Edit your `.tmux.conf` and add this line at the bottom.
 ``` bash
@@ -43,6 +43,17 @@ It is important that `#{weather_temperature}` is included in the status bar. Oth
 | #{weather_city} | Kongsberg |
 | #{weather_symbol} | 🌤️ |
 | #{weather_symbol_plaintext} | fair_day |
+
+## New Icon Style Option
+You can configure how weather icons are displayed in tmux. Add this line to your `.tmux.conf`:
+``` tmux
+set -g @weather_icon_style "nerd"  # options: "nerd" or "unicode"
+```
+* "nerd": shows Nerd Font icons
+* "unicode": shows standard Unicode emoji
+
+## Credits
+[Feqzz](https://github.com/Feqzz)
 
 ## License
 [MIT](LICENSE.md)
